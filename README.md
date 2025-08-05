@@ -1,6 +1,6 @@
 # Data Engineering Design Patterns - Chapter 4'
 
-'Idempotency Design Patterns'
+## Idempotency Design Patterns
 
 
-presented by T Manassis
+### presented by T Manassis
