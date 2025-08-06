@@ -72,8 +72,9 @@ pre {
 
 <h1 id="idempotency-design-patterns">Idempotency Design Patterns</h1>
 <h2 id="chapter-4-data-engineering-design-patterns">Chapter 4: Data Engineering Design Patterns</h2>
-<p><strong>Ensuring Consistency in Data Processing</strong> written by <em>Bartosz Konieczny</em></p>
-<p>Presented by <em>Theodore Manassis</em></p>
+<p><strong>Ensuring Consistency in Data Processing</strong></p>
+<p>Book written by <em>Bartosz Konieczny</em></p>
+<p>Chapter 4 presented by <em>Theodore Manassis</em></p>
 <footer>Idempotency Design Patterns</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-header="Data Engineering Design Patterns - Chapter 4" data-footer="Idempotency Design Patterns" data-theme="default" data-style="section {
@@ -533,16 +534,12 @@ pre {
 ;">
 <header>Data Engineering Design Patterns - Chapter 4</header>
 <h1 id="fast-metadata-cleaner---implementation">Fast Metadata Cleaner - Implementation</h1>
-&lt;div class="columns"&gt;
-&lt;div&gt;
 <h3 id="key-concepts">Key Concepts</h3>
 <ul>
 <li><strong>Idempotency granularity</strong></li>
 <li>Physical isolation of datasets</li>
 <li>Logical data exposition (views)</li>
 </ul>
-&lt;/div&gt;
-&lt;div&gt;
 <h3 id="workflow-steps">Workflow Steps</h3>
 <ol>
 <li>Analyze execution date</li>
@@ -550,8 +547,6 @@ pre {
 <li>Update data exposition layer</li>
 <li>Load new data</li>
 </ol>
-&lt;/div&gt;
-&lt;/div&gt;
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sql"><span class="hljs-comment">-- Fast operation (metadata)</span>
 <span class="hljs-keyword">TRUNCATE</span> <span class="hljs-keyword">TABLE</span> visits_week_42;
 
@@ -998,7 +993,7 @@ pre {
 }
 ;">
 <header>Data Engineering Design Patterns - Chapter 4</header>
-<p>Add state management pt2</p>
+<h2 id="add-state-management-pt2">Add state management pt2</h2>
 <h3 id="state-table-structure">State Table Structure</h3>
 <table>
 <thead>
@@ -1085,8 +1080,6 @@ pre {
 ;">
 <header>Data Engineering Design Patterns - Chapter 4</header>
 <h1 id="stateful-merger---implementation">Stateful Merger - Implementation</h1>
-&lt;div class="columns"&gt;
-&lt;div&gt;
 <h3 id="workflow">Workflow</h3>
 <ol>
 <li>Check if backfilling</li>
