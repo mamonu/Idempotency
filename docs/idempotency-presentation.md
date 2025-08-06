@@ -39,9 +39,11 @@ style: |
 # Idempotency Design Patterns
 ## Chapter 4: Data Engineering Design Patterns
 
-**Ensuring Consistency in Data Processing** written by *Bartosz Konieczny*
+**Ensuring Consistency in Data Processing** 
 
-Presented by *Theodore Manassis*
+Book written by *Bartosz Konieczny*
+
+Chapter 4 presented by *Theodore Manassis*
 
 ---
 
@@ -130,25 +132,16 @@ Use metadata operations instead of data operations:
 
 # Fast Metadata Cleaner - Implementation
 
-<div class="columns">
-<div>
-
 ### Key Concepts
 - **Idempotency granularity**
 - Physical isolation of datasets
 - Logical data exposition (views)
-
-</div>
-<div>
 
 ### Workflow Steps
 1. Analyze execution date
 2. Create idempotency environment
 3. Update data exposition layer
 4. Load new data
-
-</div>
-</div>
 
 ```sql
 -- Fast operation (metadata)
@@ -185,11 +178,11 @@ DELETE FROM visits WHERE week = 42;
 ## Implementation Options
 
 ### Data Processing Frameworks
+
 ```python
 # Apache Spark
 input_data.write.mode('overwrite').text(output_path)
 ```
-
 ### SQL Operations
 ```sql
 INSERT OVERWRITE INTO devices 
@@ -249,7 +242,7 @@ Add state management:
 
 ---
 
-Add state management pt2
+## Add state management pt2
 ### State Table Structure
 | Execution Time | Table Version |
 |---------------|---------------|
@@ -260,9 +253,6 @@ Add state management pt2
 ---
 
 # Stateful Merger - Implementation
-
-<div class="columns">
-<div>
 
 ### Workflow
 1. Check if backfilling
