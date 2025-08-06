@@ -247,6 +247,9 @@ Add state management:
 2. **Restore mechanism** for backfilling
 3. **Version tracking** per execution
 
+---
+
+Add state management pt2
 ### State Table Structure
 | Execution Time | Table Version |
 |---------------|---------------|
@@ -267,8 +270,9 @@ Add state management:
 3. Run MERGE operation
 4. Update state table
 
-</div>
-<div>
+---
+
+# Stateful Merger - Implementation pt2
 
 ### Backfilling Detection
 ```python
@@ -280,9 +284,6 @@ else:
     # Normal run
     proceed_with_merge()
 ```
-
-</div>
-</div>
 
 ---
 
@@ -370,9 +371,6 @@ kafka_sink = (KafkaSink.builder()
 
 # Proxy Pattern - Implementation
 
-<div class="columns">
-<div>
-
 ### Approaches
 1. **View-based**
    - Versioned tables
@@ -386,9 +384,9 @@ kafka_sink = (KafkaSink.builder()
    - Delta Lake/Iceberg
    - Time travel feature
 
-</div>
-<div>
+---
 
+# Proxy Pattern - Implementation
 ### Example
 ```sql
 -- Versioned table
@@ -400,10 +398,6 @@ CREATE VIEW devices AS
 SELECT * FROM 
   devices_v_20241105;
 ```
-
-</div>
-</div>
-
 ---
 
 # Choosing the Right Pattern

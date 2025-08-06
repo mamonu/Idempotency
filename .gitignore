@@ -1,1 +1,8 @@
 act
+# Dependencies
+node_modules/
+
+# Build outputs (if using GitHub Actions)
+# build/
+
+# If building locally and committing, comment out the above
